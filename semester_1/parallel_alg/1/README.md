@@ -2,10 +2,10 @@
 
 g++ version 5.4.0
 
-compile computing engine
+compile computing engine for write result to files
 
 ```bash
-g++ -std=c++14 -O2 -fopenmp main.cpp -o out.out
+g++ -std=c++14 -O2 -fopenmp main.cpp helper_functions.cpp -o out.out
 ```
 
 Files "number_threads.txt" and "size_data.txt" must be here. "number_threads.txt" will set number threads that engine will use.
@@ -17,9 +17,21 @@ for execution
 ./out.out
 ```
 
-After execution you will receve "time_threads.txt" that consist time(seconds) of excution in one thread, speedup for SPMD, speedup for OpenMP and
-"time_size.txt" that consist time(seconds) of excution in one thread, speedup for SPMD, speedup for OpenMP.
+After execution you will receve "time_threads.txt" that consist time(seconds) of excution in one thread, speedup for SPMD, speedup for OpenMP, speedup for OpenMP with hack and
+"time_size.txt" that consist time(seconds) of excution in one thread, speedup for SPMD, speedup for OpenMP, speedup for OpenMP with hack.
 
 Analysis is done using Python and results of computing.
+
+compile computing engine for executing one time and write result to console
+
+```bash
+g++ -std=c++14 -O2 -fopenmp test_start.cpp helper_functions.cpp -o out.out
+```
+
+for execution
+
+```bash
+./out.out
+```
 
 - [ ] use CMake for build
