@@ -87,9 +87,9 @@ int main() {
                        openMP_multiplication(A, B, C, SIZE, SIZE, n_threads)) / 3;
         renew_vector(C);
 
-        auto openMP_hack = (openMP_multiplication(A, B, C, SIZE, SIZE, THREADS, true) +
-                            openMP_multiplication(A, B, C, SIZE, SIZE, THREADS, true) +
-                            openMP_multiplication(A, B, C, SIZE, SIZE, THREADS, true)) / 3;
+        auto openMP_hack = (openMP_multiplication(A, B, C, SIZE, SIZE, n_threads, true) +
+                            openMP_multiplication(A, B, C, SIZE, SIZE, n_threads, true) +
+                            openMP_multiplication(A, B, C, SIZE, SIZE, n_threads, true)) / 3;
 
 
         time_threads << serial << "," << serial / spdm << "," << serial / openMP << "," << serial / openMP_hack << "\n";
