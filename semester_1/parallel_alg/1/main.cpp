@@ -53,7 +53,7 @@ int main() {
                             openMP_multiplication(A, B, C, N, M, THREADS, true) +
                             openMP_multiplication(A, B, C, N, M, THREADS, true)) / 3;
 
-        time_size << serial << "," << serial / spdm << "," << serial / openMP << "," << serial / openMP_hack << "," << "\n";
+        time_size << serial << "," << serial / spdm << "," << serial / openMP << "," << serial / openMP_hack << "\n";
     }
 
     time_size.close();
@@ -92,7 +92,7 @@ int main() {
                             openMP_multiplication(A, B, C, SIZE, SIZE, THREADS, true)) / 3;
 
 
-        time_threads << serial << "," << serial / spdm << "," << serial / openMP << "," << serial / openMP_hack << "," << "\n";
+        time_threads << serial << "," << serial / spdm << "," << serial / openMP << "," << serial / openMP_hack << "\n";
     }
 
     time_threads.close();
