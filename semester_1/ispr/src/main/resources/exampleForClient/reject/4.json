@@ -1,0 +1,40 @@
+{
+  "hook": "chlamydia-screening",
+  "hookInstance": "1234567890",
+  "fhirServer": "http://our_url.com",
+  "user": "Practitioner",
+  "prefetch": {
+    "patient": {
+      "gender": "male",
+      "birthDate": "1925-12-23",
+      "id": "1288993"
+    },
+    "questionnaire": {
+      "id": "qId6",
+      "title": "result",
+      "item": [
+        {
+          "linkId": "lId9",
+          "text": "What was the result of patient's Chlamydia Screening test?",
+          "type": "string"
+        }
+      ]
+    },
+    "questionnaireResponse": {
+      "resourceType": "QuestionnaireResponse",
+      "id": "qId6",
+      "questionnaire": "questionnaire/qId6",
+      "status": "completed",
+      "authored": "2019-07-18",
+      "item": [
+        {
+          "linkId": "lId9",
+          "text": "What was the result of patient's Chlamydia Screening test?",
+          "answer": {
+            "valueString": "pain again"
+          }
+        }
+      ]
+    }
+  }
+}

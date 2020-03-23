@@ -1,0 +1,40 @@
+{
+  "hook": "chlamydia-screening",
+  "hookInstance": "1234567890",
+  "fhirServer": "http://our_url.com",
+  "user": "Practitioner",
+  "prefetch": {
+    "patient": {
+      "gender": "female",
+      "birthDate": "1999-12-23",
+      "id": "1288992"
+    },
+    "questionnaire": {
+      "id": "qId4",
+      "title": "testTime",
+      "item": [
+        {
+          "linkId": "lId6",
+          "text": "When did the patient take the Chlamydia Screening test?",
+          "type": "string"
+        }
+      ]
+    },
+    "questionnaireResponse": {
+      "resourceType": "QuestionnaireResponse",
+      "id": "qId4",
+      "questionnaire": "questionnaire/qId4",
+      "status": "completed",
+      "authored": "2019-07-18",
+      "item": [
+        {
+          "linkId": "lId6",
+          "text": "When did the patient take the Chlamydia Screening test?",
+          "answer": {
+            "valueString": "2015-07-18"
+          }
+        }
+      ]
+    }
+  }
+}

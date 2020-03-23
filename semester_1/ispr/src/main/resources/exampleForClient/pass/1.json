@@ -1,0 +1,40 @@
+{
+  "hook": "chlamydia-screening",
+  "hookInstance": "1234567890",
+  "fhirServer": "http://our_url.com",
+  "user": "Practitioner",
+  "prefetch": {
+    "patient": {
+      "gender": "female",
+      "birthDate": "1999-12-23",
+      "id": "1288992"
+    },
+    "questionnaire": {
+      "id": "qId0",
+      "title": "sexuallyActive",
+      "item": [
+        {
+          "linkId": "lId0",
+          "text": "Is the patient sexually active?",
+          "type": "boolean"
+        }
+      ]
+    },
+    "questionnaireResponse": {
+      "resourceType": "QuestionnaireResponse",
+      "id": "qId0",
+      "questionnaire": "questionnaire/qId0",
+      "status": "completed",
+      "authored": "2019-07-18",
+      "item": [
+        {
+          "linkId": "lId0",
+          "text": "Is the patient sexually active?",
+          "answer": {
+            "valueBoolean": true
+          }
+        }
+      ]
+    }
+  }
+}

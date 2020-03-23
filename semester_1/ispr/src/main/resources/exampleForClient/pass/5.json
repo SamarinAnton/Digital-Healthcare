@@ -1,0 +1,40 @@
+{
+  "hook": "chlamydia-screening",
+  "hookInstance": "1234567890",
+  "fhirServer": "http://our_url.com",
+  "user": "Practitioner",
+  "prefetch": {
+    "patient": {
+      "gender": "female",
+      "birthDate": "1999-12-23",
+      "id": "1288992"
+    },
+    "questionnaire": {
+      "id": "qId8",
+      "title": "isObserved",
+      "item": [
+        {
+          "linkId": "lId12",
+          "text": "Was the patient observed for sexually transmitted infection?",
+          "type": "boolean"
+        }
+      ]
+    },
+    "questionnaireResponse": {
+      "resourceType": "QuestionnaireResponse",
+      "id": "qId8",
+      "questionnaire": "questionnaire/qId8",
+      "status": "completed",
+      "authored": "2019-07-18",
+      "item": [
+        {
+          "linkId": "lId12",
+          "text": "Was the patient observed for sexually transmitted infection?",
+          "answer": {
+            "valueBoolean": true
+          }
+        }
+      ]
+    }
+  }
+}
